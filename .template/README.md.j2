@@ -1,0 +1,23 @@
+# Data.World Notes
+{% macro sentence_case(text) %}{{ text[0]|upper}}{{text[1:] }}{% endmacro %}
+
+> Data.World Notes: I have a terrible memory so need to write this all down.
+
+---
+
+## Topics
+
+{% for markdown in markdowns %}
+* [{{ sentence_case(markdown) }}](#{{ markdown }})
+{% endfor %}
+
+---
+
+{% for markdown in markdowns %}
+### {{ sentence_case(markdown) }}
+
+{% for markdown_file in markdowns[markdown] %}
+* [{{ markdown_file["title_filename"] }}]({{ markdown_file["fullpath"] }})
+{% endfor %}
+
+{% endfor %}

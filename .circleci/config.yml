@@ -1,0 +1,26 @@
+version: 2
+
+jobs:
+    deploy:
+        docker:
+            - image: circleci/python:3.7.7
+        working_directory: ~/datadotworld-notes
+        steps:
+            - checkout
+            - run:
+                name: list directory contents
+                command: ls
+            - run: 
+                name: Download ansible
+                command: sudo apt-get install -y ansible
+            - run:
+                name: Generate README
+                command: ansible-playbook playbook.yml
+workflows:
+    version: 2
+    commit-workflow:
+        jobs:
+            - deploy:
+                filters:
+                    branches:
+                        only: master
