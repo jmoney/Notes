@@ -1,6 +1,6 @@
-# Data.World Notes
+# Notes
 
-> Data.World Notes: I have a terrible memory so need to write this all down.
+> I have a terrible memory so need to write this all down.
 
 ---
 
