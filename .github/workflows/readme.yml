@@ -3,9 +3,8 @@ on:
     push:
       branches:
         - main
-      paths:
-        - 'markdown/**'
-        - '.template/readme/**'
+      paths-ignore:
+        - 'README.md'
 jobs:
     build:
         runs-on: ubuntu-latest
