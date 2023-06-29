@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/opt/homebrew/bin/python3
 
 import glob
 import os
@@ -37,5 +37,7 @@ if __name__ == '__main__':
         else:
             markdown_file = build_markdown_file(markdown)
             markdowns[basepath] = [markdown_file]
+    notes = dict()
+    notes["notes"] = markdowns
 
-    print(json.dumps(markdowns, sort_keys=True, indent=4))
+    print(json.dumps(notes, sort_keys=True, indent=4))

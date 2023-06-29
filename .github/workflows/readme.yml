@@ -1,0 +1,34 @@
+name: Update README.md
+on:
+    push:
+      branches:
+        - main
+      paths:
+        - markdown/**
+        - .template/readme/**
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        env: 
+            CI_COMMIT_MESSAGE: Generate new README
+            CI_COMMIT_AUTHOR: Github Actions
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-python@v4
+              with:
+                python-version: '3.10' 
+            - run: python ./.template/readme/find_markdown.py > notes.json
+            - name: Generate README.md
+              uses: cuchi/jinja2-action@v1.2.0
+              with:
+                template: .template/readme/README.md.j2
+                output_file: README.md
+                data_file: notes.json
+                data_format: json # Will try to guess from the extension instead (unnecessary in this case)
+            - name: GIT commit and push all changed files
+              run: |
+                git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+                git config --global user.email "noreply@github.com"
+                git add README.md
+                git commit --message "${{ env.CI_COMMIT_MESSAGE }}"
+                git push origin main

@@ -18,15 +18,4 @@
     - template:
         src: "./.template/README.md.j2"
         dest: "README.md"
-      notify: generated
       when: circleci_commit.rc == 1
-
-  handlers:
-    - name: commit and push
-      shell: |
-        git config user.name > /dev/null || git config user.name "CircleCI"
-        git config user.email > /dev/null || git config user.email "noreply@circleci.com"
-        git add README.md
-        git commit --message "Added newly generated README" --author "CircleCI <noreply@circleci.com>"
-        git push origin master
-      listen: "generated"
