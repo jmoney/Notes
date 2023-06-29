@@ -30,4 +30,4 @@ jobs:
                 git config --global user.email "noreply@github.com"
                 git add README.md
                 git commit --message "${{ env.CI_COMMIT_MESSAGE }}"
-                git push origin main
+                git push
