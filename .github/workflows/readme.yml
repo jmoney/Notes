@@ -4,8 +4,8 @@ on:
       branches:
         - main
       paths:
-        - markdown/**
-        - .template/readme/**
+        - 'markdown/**'
+        - '.template/readme/**'
 jobs:
     build:
         runs-on: ubuntu-latest
