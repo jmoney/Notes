@@ -1,1 +1,27 @@
 foo
+@base <https://www/jmoney.dev/notes/notes#> .
+@prefix notes: <https://www.jmoney.dev/notes#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<TopicDailyStatus> a notes:Topic ;
+    notes:Path "markdown/general"^^xsd:string ;
+    notes:contains <Note06242020> .
+
+<TopicGeneral> a notes:Topic ;
+    notes:Path "markdown/general"^^xsd:string ;
+    notes:contains <NoteActions>,
+        <NoteNote> .
+
+<Note06242020> a notes:Note ;
+    notes:filename "06_24_2020.md"^^xsd:string ;
+    notes:title "06_24_2020"^^xsd:string .
+
+<NoteActions> a notes:Note ;
+    notes:filename "actions.md"^^xsd:string ;
+    notes:title "actions"^^xsd:string .
+
+<NoteNote> a notes:Note ;
+    notes:filename "note.md"^^xsd:string ;
+    notes:title "note"^^xsd:string .
+
+
