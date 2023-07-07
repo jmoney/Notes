@@ -22,14 +22,17 @@ jobs:
                 notes-root: ./markdown
                 base-uri: "https://www/jmoney.dev/notes/notes"
                 output-file: ./notes.ttl
-            - name: Check if notes.ttl changed
-              id: notes_ttl_changed
-              run: echo "rc=$(git diff --exit-code --quiet notes.ttl)" >> $GITHUB_OUTPUT
+            - name: Verify Changed files
+              uses: tj-actions/verify-changed-files@v16
+              id: verify-changed-files
+              with:
+                files: |
+                    notes.ttl
             - name: Push notes.ttl updates
-              if: ${{ steps.notes_ttl_changed.outputs.rc == '1' }}
+              if: steps.verify-changed-files.outputs.files_changed == 'true'
               run: |
                 git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
                 git config --global user.email "noreply@github.com"
-                git add README.md
+                git add notes.ttl
                 git commit --message "${{ env.CI_COMMIT_MESSAGE }}"
                 git push

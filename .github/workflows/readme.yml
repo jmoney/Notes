@@ -23,11 +23,14 @@ jobs:
                 output_file: README.md
                 data_file: notes.json
                 data_format: json
-            - name: Check if README changed
-              id: readme_changed
-              run: echo "rc=$(git diff --exit-code --quiet README.md)" >> $GITHUB_OUTPUT
+            - name: Verify Changed files
+              uses: tj-actions/verify-changed-files@v16
+              id: verify-changed-files
+              with:
+                files: |
+                    README.md
             - name: Push README.md updates
-              if: ${{ steps.readme_changed.outputs.rc == '1' }}
+              if: steps.verify-changed-files.outputs.files_changed == 'true'
               run: |
                 git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
                 git config --global user.email "noreply@github.com"
