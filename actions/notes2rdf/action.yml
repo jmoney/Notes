@@ -1,0 +1,19 @@
+name: 'notes2rdf'
+description: 'Convert notes directory structure to RDF'
+inputs:
+  notes-root:  # id of input
+    description: 'Root directory of notes'
+    required: true
+  base-uri:  # id of input
+    description: 'Root URI for the IRIs'
+    required: true
+outputs:
+  rdf: # id of output
+    description: 'The generated content in RDF'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.notes-root }}
+    - ${{ inputs.base-uri }}
+    
