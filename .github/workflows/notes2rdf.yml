@@ -23,10 +23,10 @@ jobs:
                 base-uri: "https://www/jmoney.dev/notes/notes"
                 output-file: ./notes.ttl
             - name: Check if notes.ttl changed
-              id: readme_changed
+              id: notes_ttl_changed
               run: echo "rc=$(git diff --exit-code --quiet notes.ttl)" >> $GITHUB_OUTPUT
             - name: Push notes.ttl updates
-              if: ${{ steps.readme_changed.outputs.rc == '1' }}
+              if: ${{ steps.notes_ttl_changed.outputs.rc == '1' }}
               run: |
                 git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
                 git config --global user.email "noreply@github.com"
