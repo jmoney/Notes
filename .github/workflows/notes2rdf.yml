@@ -15,6 +15,5 @@ jobs:
               id: generate-ttl
               uses: ./actions/notes2rdf
               with:
-                    notes-root: ./markdown
-                    base-uri: "https://www/jmoney.dev/notes/notes"
-            - run: echo "${{ steps.generate-ttl.outputs.content }}"
+                notes-root: ./markdown
+                base-uri: "https://www/jmoney.dev/notes/notes"
