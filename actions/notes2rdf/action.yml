@@ -13,4 +13,7 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.notes-root }}
+    - ${{ inputs.base-uri }}
     
