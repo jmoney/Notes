@@ -1,5 +1,5 @@
 name: Update README.md
-concurrency: ci-${{ github.ref }}
+concurrency: readme-${{ github.ref }}
 on:
     push:
       branches:
