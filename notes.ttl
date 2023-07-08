@@ -25,10 +25,10 @@
 
 <TopicDailyStatus> a notes:Topic ;
     notes:Path "markdown/daily-status"^^xsd:string ;
-    notes:topic "DailyStatus"^^xsd:string .
+    notes:ismemberof "DailyStatus"^^xsd:string .
 
 <TopicGeneral> a notes:Topic ;
     notes:Path "markdown/general"^^xsd:string ;
-    notes:topic "General"^^xsd:string .
+    notes:ismemberof "General"^^xsd:string .
 
 
