@@ -3,11 +3,11 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <TopicDailyStatus> a notes:Topic ;
-    notes:Path "markdown/general"^^xsd:string ;
+    notes:Path "daily-status"^^xsd:string ;
     notes:contains <Note06242020> .
 
 <TopicGeneral> a notes:Topic ;
-    notes:Path "markdown/general"^^xsd:string ;
+    notes:Path "general"^^xsd:string ;
     notes:contains <NoteActions>,
         <NoteNote> .
 
