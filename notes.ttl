@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @base <https://www/jmoney.dev/notes/notes#> .
 @prefix notes: <https://www.jmoney.dev/notes#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -24,3 +25,5 @@
     notes:title "note"^^xsd:string .
 
 
+=======
+>>>>>>> 3a019d6 (update action version)
