@@ -4,13 +4,13 @@
 
 <TopicDailyStatus> a notes:Topic ;
     notes:Path "markdown/daily-status"^^xsd:string ;
-    notes:Topic "daily-status"^^xsd:string ;
+    notes:Topic "DailyStatus"^^xsd:string ;
     notes:contains <Daily20200623>,
         <Daily20200624> .
 
 <TopicGeneral> a notes:Topic ;
     notes:Path "markdown/general"^^xsd:string ;
-    notes:Topic "general"^^xsd:string ;
+    notes:Topic "General"^^xsd:string ;
     notes:contains <NoteActions>,
         <NoteNote> .
 
