@@ -16,20 +16,20 @@
 #    Object Properties
 #################################################################
 
-###  https://www.jmoney.dev/notes#contains
-notes:contains rdf:type owl:ObjectProperty ;
-               rdfs:domain notes:Topic ;
-               rdfs:range notes:Note ;
-               rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
-               rdfs:label "contains" .
-
-
 ###  https://www.jmoney.dev/notes#previous
 notes:previous rdf:type owl:ObjectProperty ;
                rdfs:domain notes:Daily ;
                rdfs:range notes:Daily ;
                rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
                rdfs:label "previous" .
+
+
+###  https://www.jmoney.dev/notes#topic
+notes:topic rdf:type owl:ObjectProperty ;
+            rdfs:domain notes:Note ;
+            rdfs:range notes:Topic ;
+            rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
+            rdfs:label "topic" .
 
 
 #################################################################
@@ -62,12 +62,6 @@ notes:today rdf:type owl:DatatypeProperty ;
             rdfs:domain notes:Daily ;
             rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
             rdfs:label "today" .
-
-###  https://www.jmoney.dev/notes#topic
-notes:topic rdf:type owl:DatatypeProperty ;
-           rdfs:domain notes:Topic ;
-           rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
-           rdfs:label "topic" .
 
 
 #################################################################
