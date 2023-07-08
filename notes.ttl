@@ -2,33 +2,33 @@
 @prefix notes: <https://www.jmoney.dev/notes#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<Daily20200624> a notes:Daily ;
+    notes:filename "2020_06_24.md"^^xsd:string ;
+    notes:previous <Daily20200623> ;
+    notes:title "2020_06_24"^^xsd:string ;
+    notes:topic <TopicDailyStatus> .
+
+<NoteActions> a notes:Note ;
+    notes:filename "actions.md"^^xsd:string ;
+    notes:title "Actions"^^xsd:string ;
+    notes:topic <TopicGeneral> .
+
+<NoteNote> a notes:Note ;
+    notes:filename "note.md"^^xsd:string ;
+    notes:title "Note"^^xsd:string ;
+    notes:topic <TopicGeneral> .
+
+<Daily20200623> a notes:Daily ;
+    notes:filename "2020_06_23.md"^^xsd:string ;
+    notes:title "2020_06_23"^^xsd:string ;
+    notes:topic <TopicDailyStatus> .
+
 <TopicDailyStatus> a notes:Topic ;
     notes:Path "markdown/daily-status"^^xsd:string ;
-    notes:contains <Daily20200623>,
-        <Daily20200624> ;
     notes:topic "DailyStatus"^^xsd:string .
 
 <TopicGeneral> a notes:Topic ;
     notes:Path "markdown/general"^^xsd:string ;
-    notes:contains <NoteActions>,
-        <NoteNote> ;
     notes:topic "General"^^xsd:string .
-
-<Daily20200624> a notes:Daily ;
-    notes:filename "2020_06_24.md"^^xsd:string ;
-    notes:previous <Daily20200623> ;
-    notes:title "2020_06_24"^^xsd:string .
-
-<NoteActions> a notes:Note ;
-    notes:filename "actions.md"^^xsd:string ;
-    notes:title "Actions"^^xsd:string .
-
-<NoteNote> a notes:Note ;
-    notes:filename "note.md"^^xsd:string ;
-    notes:title "Note"^^xsd:string .
-
-<Daily20200623> a notes:Daily ;
-    notes:filename "2020_06_23.md"^^xsd:string ;
-    notes:title "2020_06_23"^^xsd:string .
 
 
