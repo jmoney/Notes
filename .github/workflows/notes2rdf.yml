@@ -17,7 +17,7 @@ jobs:
             - uses: actions/checkout@v3 
             - name: Generate TTL
               id: generate-ttl
-              uses: jmoney/notes2rdf@e8bffc2600860f2818d5c02a5b71f9ed3013f8c5
+              uses: jmoney/notes2rdf@b8025ebe6ca47c5c5c6b4e137eb33d36b8b94108
               with:
                 notes-root: ./markdown
                 base-uri: "https://www/jmoney.dev/notes/notes"
