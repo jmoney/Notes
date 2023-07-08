@@ -63,6 +63,12 @@ notes:today rdf:type owl:DatatypeProperty ;
             rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
             rdfs:label "today" .
 
+###  https://www.jmoney.dev/notes#topic
+notes:topic rdf:type owl:DatatypeProperty ;
+           rdfs:domain notes:Topic ;
+           rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
+           rdfs:label "topic" .
+
 
 #################################################################
 #    Classes
