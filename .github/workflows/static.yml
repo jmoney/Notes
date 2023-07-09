@@ -6,7 +6,7 @@ on:
   push:
     branches: ["master"]
     paths:
-      - 'ttl/notes.ttl'
+      - 'ontology/notes-ontology.ttl'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
