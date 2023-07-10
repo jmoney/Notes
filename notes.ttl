@@ -1,4 +1,5 @@
 @base <https://www/jmoney.dev/notes/notes#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix notes: <https://www.jmoney.dev/notes#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -24,11 +25,11 @@
     notes:topic <TopicDailyStatus> .
 
 <TopicDailyStatus> a notes:Topic ;
-    notes:Path "markdown/daily-status"^^xsd:string ;
-    notes:ismemberof "DailyStatus"^^xsd:string .
+    dcterms:isPartOf "DailyStatus"^^xsd:string ;
+    notes:Path "markdown/daily-status"^^xsd:string .
 
 <TopicGeneral> a notes:Topic ;
-    notes:Path "markdown/general"^^xsd:string ;
-    notes:ismemberof "General"^^xsd:string .
+    dcterms:isPartOf "General"^^xsd:string ;
+    notes:Path "markdown/general"^^xsd:string .
 
 
