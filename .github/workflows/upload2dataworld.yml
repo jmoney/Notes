@@ -24,7 +24,7 @@ jobs:
             - uses: actions/checkout@v3
             - name: Upload TTL
               id: upload-ttl
-              uses: jmoney/dataworld-file-upload-action@d916176352dc5176a5e7a91cdfa5d6f439296702
+              uses: jmoney/dataworld-file-upload-action@main
               with:
                 token: ${{ secrets.DATAWORLD_PAT }}
                 agentdatasetid: "jmoney/ddw-catalogs"
