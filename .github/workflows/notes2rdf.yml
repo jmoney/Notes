@@ -10,11 +10,11 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
-        env: 
+        env:
             CI_COMMIT_MESSAGE: Generate new notes.ttl
             CI_COMMIT_AUTHOR: Github Actions
         steps:
-            - uses: actions/checkout@v3 
+            - uses: actions/checkout@v3
             - name: Generate TTL
               id: generate-ttl
               uses: jmoney/notes2rdf@2ed21c1805cb90b79bf370ab5a8ba1efb2990e67
