@@ -1,5 +1,6 @@
 @prefix : <https://www.jmoney.dev/notes#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/>
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -15,14 +16,6 @@
 #################################################################
 #    Object Properties
 #################################################################
-
-###  https://www.jmoney.dev/notes#ismemberof
-notes:ismemberof rdf:type owl:ObjectProperty ;
-                 rdfs:domain notes:Note ;
-                 rdfs:range notes:Topic ;
-                 rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
-                 rdfs:label "isMemberOf" .
-
 
 ###  https://www.jmoney.dev/notes#previous
 notes:previous rdf:type owl:ObjectProperty ;
