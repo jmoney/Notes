@@ -28,4 +28,4 @@ jobs:
               with:
                 token: ${{ secrets.DATAWORLD_PAT }}
                 agentdatasetid: "jmoney/ddw-catalogs"
-                file: ./notes.ttl
+                file: notes.ttl
