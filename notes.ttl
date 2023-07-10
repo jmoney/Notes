@@ -5,31 +5,31 @@
 
 <Daily20200624> a notes:Daily ;
     dcterms:isPartOf <TopicDailyStatus> ;
-    notes:filename "2020_06_24.md"^^xsd:string ;
+    notes:filename "markdown/daily-status/2020_06_24.md"^^xsd:string ;
     notes:previous <Daily20200623> ;
-    notes:title "2020_06_24"^^xsd:string .
+    notes:title "20200624"^^xsd:string .
 
 <NoteActions> a notes:Note ;
     dcterms:isPartOf <TopicGeneral> ;
-    notes:filename "actions.md"^^xsd:string ;
+    notes:filename "markdown/general/actions.md"^^xsd:string ;
     notes:title "Actions"^^xsd:string .
 
 <NoteNote> a notes:Note ;
     dcterms:isPartOf <TopicGeneral> ;
-    notes:filename "note.md"^^xsd:string ;
+    notes:filename "markdown/general/note.md"^^xsd:string ;
     notes:title "Note"^^xsd:string .
 
 <Daily20200623> a notes:Daily ;
     dcterms:isPartOf <TopicDailyStatus> ;
-    notes:filename "2020_06_23.md"^^xsd:string ;
-    notes:title "2020_06_23"^^xsd:string .
+    notes:filename "markdown/daily-status/2020_06_23.md"^^xsd:string ;
+    notes:title "20200623"^^xsd:string .
 
 <TopicDailyStatus> a notes:Topic ;
-    notes:Path "markdown/daily-status"^^xsd:string ;
-    notes:topic "DailyStatus"^^xsd:string .
+    dcterms:isPartOf <DividerNotes> ;
+    notes:name "DailyStatus"^^xsd:string .
 
 <TopicGeneral> a notes:Topic ;
-    notes:Path "markdown/general"^^xsd:string ;
-    notes:topic "General"^^xsd:string .
+    dcterms:isPartOf <DividerNotes> ;
+    notes:name "General"^^xsd:string .
 
 
