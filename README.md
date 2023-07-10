@@ -19,7 +19,9 @@
 ### Daily-status
 
 
-* [06/24/2020](./markdown/daily-status/06_24_2020.md)
+* [2020_06_23](./markdown/daily-status/2020_06_23.md)
+
+* [2020_06_24](./markdown/daily-status/2020_06_24.md)
 
 
 
