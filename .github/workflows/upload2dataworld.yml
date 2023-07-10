@@ -22,8 +22,8 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
-            - name: Generate TTL
-              id: generate-ttl
+            - name: Upload TTL
+              id: upload-ttl
               uses: jmoney/dataworld-file-upload-action@1217a70dd2b02eafd7c54892ee9dae927608cb7e
               with:
                 token: ${{ secrets.DATAWORLD_PAT }}
