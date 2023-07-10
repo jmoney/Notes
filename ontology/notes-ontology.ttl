@@ -1,6 +1,5 @@
 @prefix : <https://www.jmoney.dev/notes#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dct: <http://purl.org/dc/terms/>
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -32,15 +31,20 @@ notes:previous rdf:type owl:ObjectProperty ;
 ###  https://www.jmoney.dev/notes#filename
 notes:filename rdf:type owl:DatatypeProperty ;
                rdfs:domain notes:Note ;
+               rdfs:comment "The path and filename pointing to the note" ;
                rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
                rdfs:label "filename" .
 
 
-###  https://www.jmoney.dev/notes#path
-notes:path rdf:type owl:DatatypeProperty ;
-           rdfs:domain notes:Topic ;
+###  https://www.jmoney.dev/notes#name
+notes:name rdf:type owl:DatatypeProperty ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( notes:Binder
+                                       notes:Divider
+                                     )
+                       ] ;
            rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
-           rdfs:label "path" .
+           rdfs:label "Name" .
 
 
 ###  https://www.jmoney.dev/notes#title
@@ -61,6 +65,13 @@ notes:today rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
+###  https://www.jmoney.dev/notes#Binder
+notes:Binder rdf:type owl:Class ;
+             rdfs:comment "A collection of Topics" ;
+             rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
+             rdfs:label "Binder" .
+
+
 ###  https://www.jmoney.dev/notes#Daily
 notes:Daily rdf:type owl:Class ;
             rdfs:subClassOf notes:Note ;
@@ -69,17 +80,18 @@ notes:Daily rdf:type owl:Class ;
             rdfs:label "Daily" .
 
 
+###  https://www.jmoney.dev/notes#Divider
+notes:Divider rdf:type owl:Class ;
+              rdfs:comment "A collection of Notes" ;
+              rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
+              rdfs:label "Divider" .
+
+
 ###  https://www.jmoney.dev/notes#Note
 notes:Note rdf:type owl:Class ;
+           rdfs:comment "A general note" ;
            rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
            rdfs:label "Note" .
-
-
-###  https://www.jmoney.dev/notes#Topic
-notes:Topic rdf:type owl:Class ;
-            rdfs:comment "A collection of notes and has a path" ;
-            rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
-            rdfs:label "Topic" .
 
 
 #################################################################
