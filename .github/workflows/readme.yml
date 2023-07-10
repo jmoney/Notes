@@ -6,14 +6,16 @@ on:
         - master
       paths:
         - 'notes.ttl'
+    # Allows you to run this workflow manually from the Actions tab
+    workflow_dispatch:
 jobs:
     build:
         runs-on: ubuntu-latest
-        env: 
+        env:
             CI_COMMIT_MESSAGE: Generate new README
             CI_COMMIT_AUTHOR: Github Actions
         steps:
-            - uses: actions/checkout@v3 
+            - uses: actions/checkout@v3
             - name: Generate notes catalog
               run: python ./.template/readme/find_markdown.py > notes.json
             - name: Generate README.md
