@@ -4,35 +4,35 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <Daily20200624> a notes:Daily ;
-    dcterms:isPartOf <TopicDailyStatus> ;
+    dcterms:isPartOf <DividerDailyStatus> ;
     notes:filename "markdown/daily-status/2020_06_24.md"^^xsd:string ;
     notes:previous <Daily20200623> ;
     notes:title "20200624"^^xsd:string .
 
 <NoteActions> a notes:Note ;
-    dcterms:isPartOf <TopicGeneral> ;
+    dcterms:isPartOf <DividerGeneral> ;
     notes:filename "markdown/general/actions.md"^^xsd:string ;
     notes:title "Actions"^^xsd:string .
 
 <NoteNote> a notes:Note ;
-    dcterms:isPartOf <TopicGeneral> ;
+    dcterms:isPartOf <DividerGeneral> ;
     notes:filename "markdown/general/note.md"^^xsd:string ;
     notes:title "Note"^^xsd:string .
 
 <Daily20200623> a notes:Daily ;
-    dcterms:isPartOf <TopicDailyStatus> ;
+    dcterms:isPartOf <DividerDailyStatus> ;
     notes:filename "markdown/daily-status/2020_06_23.md"^^xsd:string ;
     notes:title "20200623"^^xsd:string .
 
-<DividerNotes> a notes:Divider ;
+<BinderNotes> a notes:Divider ;
     notes:name "Notes"^^xsd:string .
 
-<TopicDailyStatus> a notes:Topic ;
-    dcterms:isPartOf <DividerNotes> ;
+<DividerDailyStatus> a notes:Divider ;
+    dcterms:isPartOf <BinderNotes> ;
     notes:name "DailyStatus"^^xsd:string .
 
-<TopicGeneral> a notes:Topic ;
-    dcterms:isPartOf <DividerNotes> ;
+<DividerGeneral> a notes:Divider ;
+    dcterms:isPartOf <BinderNotes> ;
     notes:name "General"^^xsd:string .
 
 
