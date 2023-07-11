@@ -29,7 +29,7 @@ jobs:
               uses: jmoney/notes2rdf@main
               with:
                 notes-root: ./markdown
-                base-uri: "https://www/jmoney.dev/notes/notes"
+                base-uri: "https://www/jmoney.dev/notes/test"
                 output-file: ./notes.ttl
             - uses: actions/upload-artifact@v2
               with:
