@@ -1,4 +1,4 @@
-@base <https://www/jmoney.dev/notes/notes#> .
+@base <https://www/jmoney.dev/notes/test#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix notes: <https://www.jmoney.dev/notes#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
