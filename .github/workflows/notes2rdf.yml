@@ -1,4 +1,4 @@
-name: Generate TTL
+name: Process Notes
 concurrency: notes2rdf-${{ github.ref }}
 on:
     push:
