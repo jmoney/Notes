@@ -24,7 +24,7 @@
     notes:filename "markdown/daily-status/2020_06_23.md"^^xsd:string ;
     notes:title "20200623"^^xsd:string .
 
-<BinderNotes> a notes:Divider ;
+<BinderNotes> a notes:Binder ;
     notes:name "Notes"^^xsd:string .
 
 <DividerDailyStatus> a notes:Divider ;
