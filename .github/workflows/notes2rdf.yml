@@ -36,7 +36,7 @@ jobs:
         steps:
             - uses: actions/download-artifact@v2
               with:
-                name: my-artifact
+                name: notes-ttl
             - name: Verify Changed files
               uses: tj-actions/verify-changed-files@v16
               id: verify-changed-files
