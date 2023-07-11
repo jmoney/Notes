@@ -17,13 +17,13 @@
     dcterms:isPartOf <DividerDailyStatus> ;
     notes:filename "markdown/daily-status/2020_06_23.md"^^xsd:string ;
     notes:next <Daily20200624> ;
-    notes:title "20200623"^^xsd:string .
+    notes:title "2020_06_23"^^xsd:string .
 
 <Daily20200624> a notes:Daily ;
     dcterms:isPartOf <DividerDailyStatus> ;
     notes:filename "markdown/daily-status/2020_06_24.md"^^xsd:string ;
     notes:previous <Daily20200623> ;
-    notes:title "20200624"^^xsd:string .
+    notes:title "2020_06_24"^^xsd:string .
 
 <BinderNotes> a notes:Binder ;
     notes:name "Notes"^^xsd:string .
