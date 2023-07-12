@@ -24,15 +24,15 @@
     notes:filename "markdown/general/note.md"^^xsd:string ;
     notes:title "Note"^^xsd:string .
 
+<https://www/jmoney.dev/notes/test#BinderNotes> a notes:Binder ;
+    notes:name "Notes"^^xsd:string .
+
 <https://www/jmoney.dev/notes/test#DividerDailyStatus> a notes:Divider ;
-    dcterms:isPartOf <notesBinderHttps://Www/Jmoney.Dev/Notes/Test#> ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#BinderNotes> ;
     notes:name "DailyStatus"^^xsd:string .
 
 <https://www/jmoney.dev/notes/test#DividerGeneral> a notes:Divider ;
-    dcterms:isPartOf <notesBinderHttps://Www/Jmoney.Dev/Notes/Test#> ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#BinderNotes> ;
     notes:name "General"^^xsd:string .
-
-<notesBinderHttps://Www/Jmoney.Dev/Notes/Test#> a notes:Binder ;
-    notes:name "Https://Www/Jmoney.Dev/Notes/Test#"^^xsd:string .
 
 
