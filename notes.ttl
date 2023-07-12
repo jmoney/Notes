@@ -12,30 +12,30 @@
     notes:filename "markdown/general/note.md"^^xsd:string ;
     notes:title "Note"^^xsd:string .
 
-<https://www/jmoney.dev/notes/test#Task04a04977-af55-42d9-b73c-a490ef83c30b> a notes:Task ;
+<https://www/jmoney.dev/notes/test#Task3c7c9098-89e5-44b0-9b3d-1c0c7492c280> a notes:Task ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
     notes:complete false ;
     notes:content "* [ ] Test not complete2"^^xsd:string .
 
-<https://www/jmoney.dev/notes/test#Task2b6aa03b-b098-4938-8efa-9ae4e8b7d573> a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
-    notes:complete false ;
-    notes:content "* [ ] Test not complete"^^xsd:string .
-
-<https://www/jmoney.dev/notes/test#Task5277b20c-8662-4c67-8d70-0d6775ef6af9> a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
-    notes:complete true ;
-    notes:content "* [X] Test complete"^^xsd:string .
-
-<https://www/jmoney.dev/notes/test#Task78d57a2e-8bbb-46bb-8f64-f5a41c260d35> a notes:Task ;
+<https://www/jmoney.dev/notes/test#Task7c088e3e-cb41-45e0-9f21-01c084969ae0> a notes:Task ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
     notes:complete true ;
     notes:content "* [X] Test complete"^^xsd:string .
 
-<https://www/jmoney.dev/notes/test#Taskb1dd8b2a-37f1-4b35-848e-196b535186cf> a notes:Task ;
+<https://www/jmoney.dev/notes/test#Task86c15afa-b2ef-4435-b74d-3b4270ab3b1e> a notes:Task ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
     notes:complete false ;
     notes:content "* [ ] Test not complete"^^xsd:string .
+
+<https://www/jmoney.dev/notes/test#Task8d6b2d67-af8d-44ea-bd71-01edcc30e533> a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
+    notes:complete false ;
+    notes:content "* [ ] Test not complete"^^xsd:string .
+
+<https://www/jmoney.dev/notes/test#Task936faad4-13d1-4126-b7f3-975c52028ac7> a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
+    notes:complete true ;
+    notes:content "* [X] Test complete"^^xsd:string .
 
 <https://www/jmoney.dev/notes/test#BinderNotes> a notes:Binder ;
     notes:name "Notes"^^xsd:string .
