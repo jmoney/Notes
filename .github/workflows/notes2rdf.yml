@@ -55,7 +55,7 @@ jobs:
               uses: jmoney/dataworld-file-upload-action@main
               with:
                 token: ${{ secrets.DATAWORLD_PAT }}
-                agentdatasetid: "jmoney8080/ddw-catalogs"
+                agentdatasetid: "jmoney/ddw-catalogs"
                 file: notes.ttl
                 filename: test-notes.ttl
     generate-readme-md:
