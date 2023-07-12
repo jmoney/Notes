@@ -12,22 +12,22 @@
     notes:filename "markdown/general/note.md"^^xsd:string ;
     notes:title "Note"^^xsd:string .
 
-<https://www/jmoney.dev/notes/test#Task1f1d4509-a4a6-4a64-b1b7-8c4b15a5dfbd> a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
-    notes:complete false ;
-    notes:content "* [ ] Test not complete"^^xsd:string .
-
-<https://www/jmoney.dev/notes/test#Task335a45f1-9856-4334-8866-e379a7c4042d> a notes:Task ;
+<https://www/jmoney.dev/notes/test#Task3194ed6c-3f12-4411-8764-4166ce12124c> a notes:Task ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
     notes:complete true ;
     notes:content "* [X] Test complete"^^xsd:string .
 
-<https://www/jmoney.dev/notes/test#Task54a0878e-b74c-465b-9d4b-b2e6c9946c96> a notes:Task ;
+<https://www/jmoney.dev/notes/test#Task68258c4b-255a-454f-a143-034bce1d559c> a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
+    notes:complete false ;
+    notes:content "* [ ] Test not complete"^^xsd:string .
+
+<https://www/jmoney.dev/notes/test#Task8c466394-e6bb-41a9-ae29-5049ee3f0b8e> a notes:Task ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
     notes:complete false ;
     notes:content "* [ ] Test not complete"^^xsd:string .
 
-<https://www/jmoney.dev/notes/test#Task63ce4cce-2718-438e-b5d4-d21cab23dd55> a notes:Task ;
+<https://www/jmoney.dev/notes/test#Taskb7661cd2-2214-458d-904e-a56565576c89> a notes:Task ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
     notes:complete true ;
     notes:content "* [X] Test complete"^^xsd:string .
@@ -47,12 +47,12 @@
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#DividerDailyStatus> ;
     notes:filename "markdown/daily-status/2020_06_23.md"^^xsd:string ;
     notes:next <https://www/jmoney.dev/notes/test#Daily20200624> ;
-    notes:title "2020_06_23"^^xsd:string .
+    notes:title "June: 23, 2020"^^xsd:string .
 
 <https://www/jmoney.dev/notes/test#Daily20200624> a notes:Daily ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#DividerDailyStatus> ;
     notes:filename "markdown/daily-status/2020_06_24.md"^^xsd:string ;
     notes:previous <https://www/jmoney.dev/notes/test#Daily20200623> ;
-    notes:title "2020_06_24"^^xsd:string .
+    notes:title "June: 24, 2020"^^xsd:string .
 
 
