@@ -1,39 +1,38 @@
-@base <https://www/jmoney.dev/notes/test#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix notes: <https://www.jmoney.dev/notes#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<NoteActions> a notes:Note ;
-    dcterms:isPartOf <DividerGeneral> ;
+<https://www/jmoney.dev/notes/test#Daily20200623> a notes:Daily ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#DividerDailyStatus> ;
+    notes:filename "markdown/daily-status/2020_06_23.md"^^xsd:string ;
+    notes:next <NoneDaily20200624> ;
+    notes:title "2020_06_23"^^xsd:string .
+
+<https://www/jmoney.dev/notes/test#Daily20200624> a notes:Daily ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#DividerDailyStatus> ;
+    notes:filename "markdown/daily-status/2020_06_24.md"^^xsd:string ;
+    notes:previous <NoneDaily20200623> ;
+    notes:title "2020_06_24"^^xsd:string .
+
+<https://www/jmoney.dev/notes/test#NoteActions> a notes:Note ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#DividerGeneral> ;
     notes:filename "markdown/general/actions.md"^^xsd:string ;
     notes:title "Actions"^^xsd:string .
 
-<NoteNote> a notes:Note ;
-    dcterms:isPartOf <DividerGeneral> ;
+<https://www/jmoney.dev/notes/test#NoteNote> a notes:Note ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#DividerGeneral> ;
     notes:filename "markdown/general/note.md"^^xsd:string ;
     notes:title "Note"^^xsd:string .
 
-<Daily20200623> a notes:Daily ;
-    dcterms:isPartOf <DividerDailyStatus> ;
-    notes:filename "markdown/daily-status/2020_06_23.md"^^xsd:string ;
-    notes:next <Daily20200624> ;
-    notes:title "2020_06_23"^^xsd:string .
-
-<Daily20200624> a notes:Daily ;
-    dcterms:isPartOf <DividerDailyStatus> ;
-    notes:filename "markdown/daily-status/2020_06_24.md"^^xsd:string ;
-    notes:previous <Daily20200623> ;
-    notes:title "2020_06_24"^^xsd:string .
-
-<BinderNotes> a notes:Binder ;
-    notes:name "Notes"^^xsd:string .
-
-<DividerDailyStatus> a notes:Divider ;
-    dcterms:isPartOf <BinderNotes> ;
+<https://www/jmoney.dev/notes/test#DividerDailyStatus> a notes:Divider ;
+    dcterms:isPartOf <notesBinderHttps://Www/Jmoney.Dev/Notes/Test#> ;
     notes:name "DailyStatus"^^xsd:string .
 
-<DividerGeneral> a notes:Divider ;
-    dcterms:isPartOf <BinderNotes> ;
+<https://www/jmoney.dev/notes/test#DividerGeneral> a notes:Divider ;
+    dcterms:isPartOf <notesBinderHttps://Www/Jmoney.Dev/Notes/Test#> ;
     notes:name "General"^^xsd:string .
+
+<notesBinderHttps://Www/Jmoney.Dev/Notes/Test#> a notes:Binder ;
+    notes:name "Https://Www/Jmoney.Dev/Notes/Test#"^^xsd:string .
 
 
