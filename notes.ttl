@@ -2,6 +2,26 @@
 @prefix notes: <https://www.jmoney.dev/notes#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<https://www/jmoney.dev/notes/test#NoteActions> a notes:Note ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#DividerGeneral> ;
+    notes:filename "markdown/general/actions.md"^^xsd:string ;
+    notes:title "Actions"^^xsd:string .
+
+<https://www/jmoney.dev/notes/test#NoteNote> a notes:Note ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#DividerGeneral> ;
+    notes:filename "markdown/general/note.md"^^xsd:string ;
+    notes:title "Note"^^xsd:string .
+
+<https://www/jmoney.dev/notes/test#Task248e7e5d-73fc-4732-918c-c5347e58c516> a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
+    notes:complete false ;
+    notes:content "* [ ] TODO for today"^^xsd:string .
+
+<https://www/jmoney.dev/notes/test#Task7f9378d8-75b3-46e2-bb91-55e3ad44e8a8> a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
+    notes:complete false ;
+    notes:content "* [ ] TODO for today"^^xsd:string .
+
 <https://www/jmoney.dev/notes/test#Daily20200623> a notes:Daily ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#DividerDailyStatus> ;
     notes:filename "markdown/daily-status/2020_06_23.md"^^xsd:string ;
@@ -13,16 +33,6 @@
     notes:filename "markdown/daily-status/2020_06_24.md"^^xsd:string ;
     notes:previous <NoneDaily20200623> ;
     notes:title "2020_06_24"^^xsd:string .
-
-<https://www/jmoney.dev/notes/test#NoteActions> a notes:Note ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#DividerGeneral> ;
-    notes:filename "markdown/general/actions.md"^^xsd:string ;
-    notes:title "Actions"^^xsd:string .
-
-<https://www/jmoney.dev/notes/test#NoteNote> a notes:Note ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#DividerGeneral> ;
-    notes:filename "markdown/general/note.md"^^xsd:string ;
-    notes:title "Note"^^xsd:string .
 
 <https://www/jmoney.dev/notes/test#BinderNotes> a notes:Binder ;
     notes:name "Notes"^^xsd:string .
