@@ -12,27 +12,27 @@
     notes:filename "markdown/general/note.md"^^xsd:string ;
     notes:title "Note"^^xsd:string .
 
-<https://www/jmoney.dev/notes/test#Task2f4af6ec-7f27-454e-b8f1-17f82673901a> a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
-    notes:complete false ;
-    notes:content "* [ ] Test not complete"^^xsd:string .
-
-<https://www/jmoney.dev/notes/test#Task99ad60c5-cbb1-41ce-b166-41fda3abaac5> a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
-    notes:complete true ;
-    notes:content "* [X] Test complete"^^xsd:string .
-
-<https://www/jmoney.dev/notes/test#Taskb44f7a69-f56e-47fc-910e-069562c23535> a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
-    notes:complete true ;
-    notes:content "* [X] Test complete"^^xsd:string .
-
-<https://www/jmoney.dev/notes/test#Taskf00d1ad0-e7bb-4101-a4be-2e72d9b89370> a notes:Task ;
+<https://www/jmoney.dev/notes/test#Task04a04977-af55-42d9-b73c-a490ef83c30b> a notes:Task ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
     notes:complete false ;
     notes:content "* [ ] Test not complete2"^^xsd:string .
 
-<https://www/jmoney.dev/notes/test#Taskf534bc8e-8076-43ed-a4b0-2805b25d8411> a notes:Task ;
+<https://www/jmoney.dev/notes/test#Task2b6aa03b-b098-4938-8efa-9ae4e8b7d573> a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
+    notes:complete false ;
+    notes:content "* [ ] Test not complete"^^xsd:string .
+
+<https://www/jmoney.dev/notes/test#Task5277b20c-8662-4c67-8d70-0d6775ef6af9> a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
+    notes:complete true ;
+    notes:content "* [X] Test complete"^^xsd:string .
+
+<https://www/jmoney.dev/notes/test#Task78d57a2e-8bbb-46bb-8f64-f5a41c260d35> a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
+    notes:complete true ;
+    notes:content "* [X] Test complete"^^xsd:string .
+
+<https://www/jmoney.dev/notes/test#Taskb1dd8b2a-37f1-4b35-848e-196b535186cf> a notes:Task ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
     notes:complete false ;
     notes:content "* [ ] Test not complete"^^xsd:string .
