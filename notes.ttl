@@ -12,40 +12,28 @@
     notes:filename "markdown/general/note.md"^^xsd:string ;
     notes:title "Note"^^xsd:string .
 
-<https://www/jmoney.dev/notes/test#Task2b60a59a-7fad-4540-b429-c3823ebd3127> a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
+<https://www/jmoney.dev/notes/test#Task1f1d4509-a4a6-4a64-b1b7-8c4b15a5dfbd> a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
     notes:complete false ;
     notes:content "* [ ] Test not complete"^^xsd:string .
 
-<https://www/jmoney.dev/notes/test#Task2f87804e-f9d1-495e-983a-f445ab84c397> a notes:Task ;
+<https://www/jmoney.dev/notes/test#Task335a45f1-9856-4334-8866-e379a7c4042d> a notes:Task ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
     notes:complete true ;
     notes:content "* [X] Test complete"^^xsd:string .
 
-<https://www/jmoney.dev/notes/test#Task874dd25a-5a61-4e37-aadc-2fca2650fce6> a notes:Task ;
+<https://www/jmoney.dev/notes/test#Task54a0878e-b74c-465b-9d4b-b2e6c9946c96> a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
+    notes:complete false ;
+    notes:content "* [ ] Test not complete"^^xsd:string .
+
+<https://www/jmoney.dev/notes/test#Task63ce4cce-2718-438e-b5d4-d21cab23dd55> a notes:Task ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
     notes:complete true ;
     notes:content "* [X] Test complete"^^xsd:string .
-
-<https://www/jmoney.dev/notes/test#Taska0ad7340-a00a-4a20-9b53-33c009c2e21c> a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
-    notes:complete false ;
-    notes:content "* [ ] Test not complete"^^xsd:string .
 
 <https://www/jmoney.dev/notes/test#BinderNotes> a notes:Binder ;
     notes:name "Notes"^^xsd:string .
-
-<https://www/jmoney.dev/notes/test#Daily20200623> a notes:Daily ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#DividerDailyStatus> ;
-    notes:filename "markdown/daily-status/2020_06_23.md"^^xsd:string ;
-    notes:next <NoneDaily20200624> ;
-    notes:title "2020_06_23"^^xsd:string .
-
-<https://www/jmoney.dev/notes/test#Daily20200624> a notes:Daily ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#DividerDailyStatus> ;
-    notes:filename "markdown/daily-status/2020_06_24.md"^^xsd:string ;
-    notes:previous <NoneDaily20200623> ;
-    notes:title "2020_06_24"^^xsd:string .
 
 <https://www/jmoney.dev/notes/test#DividerDailyStatus> a notes:Divider ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#BinderNotes> ;
@@ -54,5 +42,17 @@
 <https://www/jmoney.dev/notes/test#DividerGeneral> a notes:Divider ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#BinderNotes> ;
     notes:name "General"^^xsd:string .
+
+<https://www/jmoney.dev/notes/test#Daily20200623> a notes:Daily ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#DividerDailyStatus> ;
+    notes:filename "markdown/daily-status/2020_06_23.md"^^xsd:string ;
+    notes:next <https://www/jmoney.dev/notes/test#Daily20200624> ;
+    notes:title "2020_06_23"^^xsd:string .
+
+<https://www/jmoney.dev/notes/test#Daily20200624> a notes:Daily ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#DividerDailyStatus> ;
+    notes:filename "markdown/daily-status/2020_06_24.md"^^xsd:string ;
+    notes:previous <https://www/jmoney.dev/notes/test#Daily20200623> ;
+    notes:title "2020_06_24"^^xsd:string .
 
 
