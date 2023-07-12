@@ -17,7 +17,7 @@ jobs:
             - name: Query Graph
               uses: jmoney/sparql-query@main
               with:
-                query-file: ./.template/daily_status/daily.sparql
+                query: ./.template/daily_status/daily.sparql
                 output-file: ./data.json
             - name: Generate today's status
               uses: cuchi/jinja2-action@v1.2.0
