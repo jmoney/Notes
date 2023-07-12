@@ -14,8 +14,11 @@ jobs:
             - name: Get current date
               id: date
               run: echo "::set-output name=date::$(date +'%Y_%m_%d')"
-            - name: Generate unfinished items catalog
-              run: python ./.template/daily_status/generate_data.py > data.json
+            - name: Query Graph
+              uses: jmoney/sparql-query@main
+              with:
+                query-file: ./.template/daily_status/daily.sparql
+                output-file: ./data.json
             - name: Generate today's status
               uses: cuchi/jinja2-action@v1.2.0
               with:

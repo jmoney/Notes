@@ -1,4 +1,3 @@
-# {{ today }}
-{% for unfinished_item in yesterday_items %}
-{{ unfinished_item }}
-{%- endfor %}
+# {{ .results.bindings[0].title.value }}
+
+{{ .results.bindings[0].tasks.value }}

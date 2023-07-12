@@ -1,0 +1,18 @@
+SELECT ?daily ?title (group_concat(?task; separator="||") AS ?tasks)
+WHERE {
+    ?bnode rdf:type notes:Task .
+    ?bnode notes:content ?task .
+    ?bnode dcterms:isPartOf ?daily .
+    ?bnode notes:complete false .
+    {
+        SELECT ?daily ?title
+        WHERE {
+            ?daily rdf:type notes:Daily .
+            ?daily notes:title ?title
+            FILTER NOT EXISTS {
+                ?daily notes:next ?next .
+            }
+        }
+    }
+}
+GROUP BY ?daily ?title
