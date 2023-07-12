@@ -12,22 +12,22 @@
     notes:filename "markdown/general/note.md"^^xsd:string ;
     notes:title "Note"^^xsd:string .
 
-<https://www/jmoney.dev/notes/test#Task194d65f6-49a4-4b76-8e0b-71bb7032c9fb> a notes:Task ;
+<https://www/jmoney.dev/notes/test#Task063667fc-d686-4713-9ec0-055a72d905df> a notes:Task ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
     notes:complete true ;
     notes:content "* [X] Test complete"^^xsd:string .
 
-<https://www/jmoney.dev/notes/test#Taska5f235b5-6099-45cb-b7af-20d659760124> a notes:Task ;
+<https://www/jmoney.dev/notes/test#Task12bf6941-b7de-4534-beae-a69a10c1633e> a notes:Task ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
     notes:complete false ;
     notes:content "* [ ] Test not complete"^^xsd:string .
 
-<https://www/jmoney.dev/notes/test#Taskc421e4d5-c631-4950-bc7b-4f435c2f0728> a notes:Task ;
+<https://www/jmoney.dev/notes/test#Task1de12a2c-c09d-4dfe-9b44-da3889654090> a notes:Task ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
     notes:complete false ;
     notes:content "* [ ] Test not complete"^^xsd:string .
 
-<https://www/jmoney.dev/notes/test#Taske39ff1a8-bd8b-4a28-a4fb-d2162076143a> a notes:Task ;
+<https://www/jmoney.dev/notes/test#Taskb1f8cea2-f8c7-4b4c-bcf7-b58365c1f8b6> a notes:Task ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
     notes:complete true ;
     notes:content "* [X] Test complete"^^xsd:string .
