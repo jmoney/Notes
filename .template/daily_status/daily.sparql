@@ -1,3 +1,6 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX notes: <https://www.jmoney.dev/notes#>
+
 SELECT ?daily ?title (group_concat(?task; separator="||") AS ?tasks)
 WHERE {
     ?bnode rdf:type notes:Task .
