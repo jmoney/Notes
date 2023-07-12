@@ -12,25 +12,30 @@
     notes:filename "markdown/general/note.md"^^xsd:string ;
     notes:title "Note"^^xsd:string .
 
-<https://www/jmoney.dev/notes/test#Task063667fc-d686-4713-9ec0-055a72d905df> a notes:Task ;
+<https://www/jmoney.dev/notes/test#Task3bf3365f-a7ed-46db-9c3b-f68d5a622307> a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
+    notes:complete true ;
+    notes:content "* [X] Test complete"^^xsd:string .
+
+<https://www/jmoney.dev/notes/test#Task3f6981be-573b-4789-9903-ef0abd35dc2b> a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
+    notes:complete false ;
+    notes:content "* [ ] Test not complete2"^^xsd:string .
+
+<https://www/jmoney.dev/notes/test#Task8637aa8a-32b6-4b02-8859-d926274b6b4c> a notes:Task ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
     notes:complete true ;
     notes:content "* [X] Test complete"^^xsd:string .
 
-<https://www/jmoney.dev/notes/test#Task12bf6941-b7de-4534-beae-a69a10c1633e> a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
-    notes:complete false ;
-    notes:content "* [ ] Test not complete"^^xsd:string .
-
-<https://www/jmoney.dev/notes/test#Task1de12a2c-c09d-4dfe-9b44-da3889654090> a notes:Task ;
+<https://www/jmoney.dev/notes/test#Taskaa7e942e-b37f-471d-afe9-1fae9545b22b> a notes:Task ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
     notes:complete false ;
     notes:content "* [ ] Test not complete"^^xsd:string .
 
-<https://www/jmoney.dev/notes/test#Taskb1f8cea2-f8c7-4b4c-bcf7-b58365c1f8b6> a notes:Task ;
+<https://www/jmoney.dev/notes/test#Taskcda71259-c56c-4a66-921d-ec145dd4399e> a notes:Task ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
-    notes:complete true ;
-    notes:content "* [X] Test complete"^^xsd:string .
+    notes:complete false ;
+    notes:content "* [ ] Test not complete"^^xsd:string .
 
 <https://www/jmoney.dev/notes/test#BinderNotes> a notes:Binder ;
     notes:name "Notes"^^xsd:string .
