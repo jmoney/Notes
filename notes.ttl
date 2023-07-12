@@ -12,37 +12,8 @@
     notes:filename "markdown/general/note.md"^^xsd:string ;
     notes:title "Note"^^xsd:string .
 
-<https://www/jmoney.dev/notes/test#Task82837972-d3d1-40b6-85dd-5130e33a87db> a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
-    notes:complete true ;
-    notes:content "* [X] Test complete"^^xsd:string .
-
-<https://www/jmoney.dev/notes/test#Task96a1ed0d-ed4c-4de9-83bc-86d61e01195d> a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
-    notes:complete false ;
-    notes:content "* [ ] Test not complete"^^xsd:string .
-
-<https://www/jmoney.dev/notes/test#Taska562ee93-17b6-47e7-852f-a71dab124c18> a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
-    notes:complete false ;
-    notes:content "* [ ] Test not complete2"^^xsd:string .
-
-<https://www/jmoney.dev/notes/test#Taska7d39a3f-0100-4fda-b672-214b262b578c> a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
-    notes:complete true ;
-    notes:content "* [X] Test complete"^^xsd:string .
-
-<https://www/jmoney.dev/notes/test#Taskee29a54e-5583-4e60-8d8d-de7098e88ff4> a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
-    notes:complete false ;
-    notes:content "* [ ] Test not complete"^^xsd:string .
-
 <https://www/jmoney.dev/notes/test#BinderNotes> a notes:Binder ;
     notes:name "Notes"^^xsd:string .
-
-<https://www/jmoney.dev/notes/test#DividerDailyStatus> a notes:Divider ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#BinderNotes> ;
-    notes:name "DailyStatus"^^xsd:string .
 
 <https://www/jmoney.dev/notes/test#DividerGeneral> a notes:Divider ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#BinderNotes> ;
@@ -54,10 +25,56 @@
     notes:next <https://www/jmoney.dev/notes/test#Daily20200624> ;
     notes:title "June: 23, 2020"^^xsd:string .
 
+<https://www/jmoney.dev/notes/test#Daily20230712> a notes:Daily ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#DividerDailyStatus> ;
+    notes:filename "markdown/daily-status/2023_07_12.md"^^xsd:string ;
+    notes:previous <https://www/jmoney.dev/notes/test#Daily20200624> ;
+    notes:title "July: 12, 2023"^^xsd:string .
+
+<https://www/jmoney.dev/notes/test#DividerDailyStatus> a notes:Divider ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#BinderNotes> ;
+    notes:name "DailyStatus"^^xsd:string .
+
 <https://www/jmoney.dev/notes/test#Daily20200624> a notes:Daily ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#DividerDailyStatus> ;
     notes:filename "markdown/daily-status/2020_06_24.md"^^xsd:string ;
+    notes:next <https://www/jmoney.dev/notes/test#Daily20230712> ;
     notes:previous <https://www/jmoney.dev/notes/test#Daily20200623> ;
     notes:title "June: 24, 2020"^^xsd:string .
+
+[] a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
+    notes:complete false ;
+    notes:content "* [ ] Test not complete2"^^xsd:string .
+
+[] a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
+    notes:complete false ;
+    notes:content "* [ ] Test not complete"^^xsd:string .
+
+[] a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
+    notes:complete true ;
+    notes:content "* [X] Test complete"^^xsd:string .
+
+[] a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
+    notes:complete false ;
+    notes:content "* [ ] Test not complete"^^xsd:string .
+
+[] a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
+    notes:complete true ;
+    notes:content "* [X] Test complete"^^xsd:string .
+
+[] a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20230712> ;
+    notes:complete false ;
+    notes:content "* [ ] Test not complete2"^^xsd:string .
+
+[] a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20230712> ;
+    notes:complete false ;
+    notes:content "* [ ] Test not complete"^^xsd:string .
 
 

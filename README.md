@@ -19,6 +19,8 @@
 ### Daily-status
 
 
+* [2023_07_12](./markdown/daily-status/2023_07_12.md)
+
 * [2020_06_23](./markdown/daily-status/2020_06_23.md)
 
 * [2020_06_24](./markdown/daily-status/2020_06_24.md)
