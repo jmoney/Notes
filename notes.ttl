@@ -12,13 +12,13 @@
     notes:filename "markdown/general/note.md"^^xsd:string ;
     notes:title "Note"^^xsd:string .
 
-<https://www/jmoney.dev/notes/test#Task248e7e5d-73fc-4732-918c-c5347e58c516> a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
+<https://www/jmoney.dev/notes/test#Taske2d2e3cc-81a5-4080-b425-7898e976a4e1> a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
     notes:complete false ;
     notes:content "* [ ] TODO for today"^^xsd:string .
 
-<https://www/jmoney.dev/notes/test#Task7f9378d8-75b3-46e2-bb91-55e3ad44e8a8> a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
+<https://www/jmoney.dev/notes/test#Taskf471fe74-a14d-4a78-aa1d-59f76d1d77b7> a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
     notes:complete false ;
     notes:content "* [ ] TODO for today"^^xsd:string .
 
