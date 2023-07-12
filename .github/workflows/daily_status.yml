@@ -11,15 +11,29 @@ jobs:
             CI_COMMIT_AUTHOR: Github Actions
         steps:
             - uses: actions/checkout@v3
-            - name: Get current date
-              id: date
-              run: echo "date=$(date +'%Y_%m_%d')" >> $GITHUB_OUTPUT
-            - name: Query Graph
+            - name: Create today's file
+              run: touch ./markdown/daily-status/$(date +'%Y_%m_%d').md
+            - name: Generate TTL
+              id: generate-ttl
+              uses: jmoney/notes2rdf@main
+              with:
+                notes-root: ./markdown
+                base-uri: "https://www/jmoney.dev/notes/test"
+                output-file: ./notes.ttl
+            - name: Construct new Daily node
               uses: jmoney/sparql-query@main
               with:
-                query: ./.template/daily_status/daily.sparql
+                query: ./.template/daily_status/new_daily.sparql
                 graph: ./notes.ttl
-                output-file: ./data.json
+                format: ttl
+                output-file: daily_note.ttl
+            - name: Construct new Daily node
+              uses: jmoney/sparql-query@main
+              with:
+                query: ./.template/daily_status/content_daily.sparql
+                graph: ./
+                format: json
+                output-file: data.json
             - name: Generate today's status
               uses: cuchi/jinja2-action@v1.2.0
               with:

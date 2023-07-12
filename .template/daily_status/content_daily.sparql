@@ -1,7 +1,11 @@
+BASE <https://www.jmoney.dev/notes/test>
+
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX notes: <https://www.jmoney.dev/notes#>
+PREFIX fn: <http://www.w3.org/2005/xpath-functions#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?daily ?title (group_concat(?task; separator="||") AS ?tasks)
+SELECT ?title (group_concat(?task; separator="||") as ?tasks)
 WHERE {
     ?bnode rdf:type notes:Task .
     ?bnode notes:content ?task .
@@ -18,4 +22,4 @@ WHERE {
         }
     }
 }
-GROUP BY ?daily ?title
+
