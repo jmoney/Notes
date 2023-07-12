@@ -1,3 +1,5 @@
 # {{ .results.bindings[0].title.value }}
-
-{{ .results.bindings[0].tasks.value }}
+{% set tasks = .results.bindings[0].tasks.value.split('||') %}
+{% for task in tasks %}
+{{ task }}
+{%- endfor %}
