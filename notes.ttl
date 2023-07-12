@@ -12,15 +12,28 @@
     notes:filename "markdown/general/note.md"^^xsd:string ;
     notes:title "Note"^^xsd:string .
 
-<https://www/jmoney.dev/notes/test#Taske2d2e3cc-81a5-4080-b425-7898e976a4e1> a notes:Task ;
+<https://www/jmoney.dev/notes/test#Task18f5acdd-661d-4688-b022-99095a696f7e> a notes:Task ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
     notes:complete false ;
-    notes:content "* [ ] TODO for today"^^xsd:string .
+    notes:content "* [ ] Test not complete"^^xsd:string .
 
-<https://www/jmoney.dev/notes/test#Taskf471fe74-a14d-4a78-aa1d-59f76d1d77b7> a notes:Task ;
+<https://www/jmoney.dev/notes/test#Task3d39267f-5f4f-4a2a-979d-79ada64da683> a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
+    notes:complete true ;
+    notes:content "* [X] Test complete"^^xsd:string .
+
+<https://www/jmoney.dev/notes/test#Task46cdc96c-0902-4350-9c0b-e057ff8f8535> a notes:Task ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
     notes:complete false ;
-    notes:content "* [ ] TODO for today"^^xsd:string .
+    notes:content "* [ ] Test not complete"^^xsd:string .
+
+<https://www/jmoney.dev/notes/test#Taskde8e6c90-448d-468e-b89a-81bcb8de7271> a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
+    notes:complete true ;
+    notes:content "* [X] Test complete"^^xsd:string .
+
+<https://www/jmoney.dev/notes/test#BinderNotes> a notes:Binder ;
+    notes:name "Notes"^^xsd:string .
 
 <https://www/jmoney.dev/notes/test#Daily20200623> a notes:Daily ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#DividerDailyStatus> ;
@@ -33,9 +46,6 @@
     notes:filename "markdown/daily-status/2020_06_24.md"^^xsd:string ;
     notes:previous <NoneDaily20200623> ;
     notes:title "2020_06_24"^^xsd:string .
-
-<https://www/jmoney.dev/notes/test#BinderNotes> a notes:Binder ;
-    notes:name "Notes"^^xsd:string .
 
 <https://www/jmoney.dev/notes/test#DividerDailyStatus> a notes:Divider ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#BinderNotes> ;
