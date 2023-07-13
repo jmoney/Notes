@@ -29,10 +29,7 @@ CONSTRUCT {
     FILTER NOT EXISTS {
         ?daily notes:next ?next .
     }
-    BIND("2023-07-13" AS ?today)
-    BIND(REPLACE(?today, "-", "") AS ?today_key)
-    BIND(CONCAT("#Daily", ?today_key) AS ?key)
-    BIND(IRI(?key) AS ?today_iri)
+    BIND(IRI(CONCAT("#Daily", REPLACE(STR(?today), "-", ""))) AS ?today_iri)
     BIND(CONCAT("markdown/daily-status/", REPLACE(?today, "-", "_"), ".md") AS ?filename)
     BIND(BNODE() AS ?bnode)
 }
