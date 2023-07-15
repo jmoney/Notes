@@ -63,14 +63,19 @@ jobs:
         needs: generate-ttl
         steps:
             - uses: actions/checkout@v3
-            - name: Generate notes catalog
-              run: python ./.template/readme/generate_data.py > notes.json
+            - name: Query for README content
+              uses: jmoney/sparql-query@main
+              with:
+                query: ./.template/readme/readme.sparql
+                graph: ./
+                format: json
+                output-file: bindings.json
             - name: Generate README.md
               uses: cuchi/jinja2-action@v1.2.0
               with:
                 template: ./.template/readme/README.md.j2
                 output_file: README.md
-                data_file: notes.json
+                data_file: bindings.json
                 data_format: json
             - uses: actions/upload-artifact@v2
               with:

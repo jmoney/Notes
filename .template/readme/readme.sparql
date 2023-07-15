@@ -1,0 +1,19 @@
+BASE <https://www.jmoney.dev/notes/test>
+
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX notes: <https://www.jmoney.dev/notes#>
+PREFIX fn: <http://www.w3.org/2005/xpath-functions#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?divider_name (group_concat(?note_title_filename; separator="||") AS ?notes)
+# SELECT ?divider_name ?note_title ?note_filename
+WHERE {
+    ?note rdf:type notes:Note .
+    ?note dcterms:isPartOf/notes:name ?divider_name .
+    ?note notes:title ?note_title .
+    ?note notes:filename ?note_filename .
+
+    BIND(CONCAT(?note_title, "|", ?note_filename) AS ?note_title_filename)
+}
+GROUP BY ?divider_name
+ORDER BY ?divider_name ?note_title

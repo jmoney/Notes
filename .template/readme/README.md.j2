@@ -1,23 +1,18 @@
 # Notes
-{% macro sentence_case(text) %}{{ text[0]|upper}}{{text[1:] }}{% endmacro %}
 
 > I have a terrible memory so need to write this all down.
 
 ---
 
 ## Topics
-
-{% for note in notes %}
-* [{{ sentence_case(note) }}](#{{ note }})
-{% endfor %}
+{% for divider in results.bindings %}
+* [{{ divider.divider_name.value }}](#{{ divider.divider_name.value }})
+{%- endfor %}
 
 ---
-
-{% for note in notes %}
-### {{ sentence_case(note) }}
-
-{% for note_file in notes[note] %}
-* [{{ note_file["title_filename"] }}]({{ note_file["fullpath"] }})
-{% endfor %}
-
+{% for divider in results.bindings %}
+### {{ divider.divider_name.value }}
+{% for note in divider.notes.value.split('||') %}
+* [{{ note.split('|')[0] }}]({{ note.split('|')[1] }})
+{%- endfor %}
 {% endfor %}
