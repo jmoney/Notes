@@ -6,8 +6,8 @@
 
 ## Topics
 
-* [General](#General)
-* [Github](#Github)
+* [General](#general)
+* [Github](#github)
 
 ---
 
