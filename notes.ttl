@@ -62,6 +62,16 @@
 [] a notes:Task ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
     notes:complete false ;
+    notes:content "Test not complete2"^^xsd:string .
+
+[] a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20230712> ;
+    notes:complete false ;
+    notes:content "Test not complete2"^^xsd:string .
+
+[] a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
+    notes:complete false ;
     notes:content "Test not complete"^^xsd:string .
 
 [] a notes:Task ;
@@ -72,21 +82,11 @@
 [] a notes:Task ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20230712> ;
     notes:complete false ;
-    notes:content "Test not complete2"^^xsd:string .
-
-[] a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20230712> ;
-    notes:complete false ;
-    notes:content "Test not complete"^^xsd:string .
-
-[] a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
-    notes:complete false ;
     notes:content "Test not complete"^^xsd:string .
 
 [] a notes:Task ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
     notes:complete false ;
-    notes:content "Test not complete2"^^xsd:string .
+    notes:content "Test not complete"^^xsd:string .
 
 
