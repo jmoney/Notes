@@ -16,8 +16,6 @@ jobs:
               run: |
                 echo date=$(date +'%Y_%m_%d') >> $GITHUB_OUTPUT
                 echo SPARQL_BIND_date_today=$(date +'%Y-%m-%d') >> $GITHUB_ENV
-            - name: Create today's file
-              run: touch ./markdown/daily-status/${SPARQL_BIND_date_today//-/_}.md
             - name: Generate TTL
               id: generate-ttl
               uses: jmoney/notes2rdf@main
@@ -25,7 +23,6 @@ jobs:
                 notes-root: ./markdown
                 base-uri: "https://www/jmoney.dev/notes/test"
                 output-file: ./notes.ttl
-
             - name: Construct new Daily node
               uses: jmoney/sparql-query@main
               with:
@@ -51,6 +48,6 @@ jobs:
               run: |
                 git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
                 git config --global user.email "noreply@github.com"
-                git add  ./markdown/daily-status/${{ steps.today.outputs.date }}.md
+                git add ./markdown/daily-status/${{ steps.today.outputs.date }}.md
                 git commit --message "${{ env.CI_COMMIT_MESSAGE }}"
                 git push
