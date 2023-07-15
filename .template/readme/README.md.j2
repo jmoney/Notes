@@ -6,7 +6,7 @@
 
 ## Topics
 {% for divider in results.bindings %}
-* [{{ divider.divider_name.value }}](#{{ divider.divider_name.value }})
+* [{{ divider.divider_name.value }}](#{{ divider.divider_name.value|lower }})
 {%- endfor %}
 
 ---
@@ -15,4 +15,4 @@
 {% for note in divider.notes.value.split('||') %}
 * [{{ note.split('|')[0] }}]({{ note.split('|')[1] }})
 {%- endfor %}
-{% endfor %}
+{% endfor -%}
