@@ -7,19 +7,24 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?title (group_concat(?task; separator="||") as ?tasks)
 WHERE {
-    ?bnode rdf:type notes:Task .
-    ?bnode notes:content ?task .
-    ?bnode dcterms:isPartOf ?daily .
-    ?bnode notes:complete false .
-    {
-        SELECT ?daily ?title
-        WHERE {
-            ?daily rdf:type notes:Daily .
-            ?daily notes:title ?title
-            FILTER NOT EXISTS {
-                ?daily notes:next ?next .
+    SELECT ?title ?task
+    WHERE {
+        ?bnode rdf:type notes:Task .
+        ?bnode notes:content ?task .
+        ?bnode notes:rank ?rank .
+        ?bnode dcterms:isPartOf ?daily .
+        ?bnode notes:complete false .
+        {
+            SELECT ?daily ?title
+            WHERE {
+                ?daily rdf:type notes:Daily .
+                ?daily notes:title ?title .
+                FILTER NOT EXISTS {
+                    ?daily notes:next ?next .
+                }
             }
         }
     }
+    ORDER BY ?rank
 }
 

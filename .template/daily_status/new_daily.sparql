@@ -19,11 +19,13 @@ CONSTRUCT {
     ?bnode dcterms:isPartOf ?today_iri .
     ?bnode notes:complete false .
     ?bnode notes:content ?task .
+    ?bnode notes:rank ?rank .
 } WHERE {
     ?x rdf:type notes:Task .
     ?x dcterms:isPartOf ?daily .
     ?x notes:complete false .
     ?x notes:content ?task .
+    ?x notes:rank ?rank .
     ?daily notes:date ?date .
     ?daily dcterms:isPartOf ?divider .
     FILTER NOT EXISTS {
