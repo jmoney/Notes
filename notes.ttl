@@ -63,6 +63,36 @@
     notes:title "2020-06-24"^^xsd:string .
 
 [] a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20230716> ;
+    notes:complete false ;
+    notes:content "Test not complete"^^xsd:string ;
+    notes:rank 0 .
+
+[] a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20230712> ;
+    notes:complete false ;
+    notes:content "Test not complete2"^^xsd:string ;
+    notes:rank 1 .
+
+[] a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
+    notes:complete false ;
+    notes:content "Test not complete2"^^xsd:string ;
+    notes:rank 1 .
+
+[] a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20230716> ;
+    notes:complete false ;
+    notes:content "Test not complete2"^^xsd:string ;
+    notes:rank 1 .
+
+[] a notes:Task ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
+    notes:complete false ;
+    notes:content "Test not complete"^^xsd:string ;
+    notes:rank 0 .
+
+[] a notes:Task ;
     dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20230712> ;
     notes:complete false ;
     notes:content "Test not complete"^^xsd:string ;
@@ -75,7 +105,7 @@
     notes:rank 1 .
 
 [] a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200623> ;
+    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
     notes:complete false ;
     notes:content "Test not complete"^^xsd:string ;
     notes:rank 0 .
@@ -85,35 +115,5 @@
     notes:complete true ;
     notes:content "Test complete"^^xsd:string ;
     notes:rank 2 .
-
-[] a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20230712> ;
-    notes:complete false ;
-    notes:content "Test not complete2"^^xsd:string ;
-    notes:rank 1 .
-
-[] a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
-    notes:complete false ;
-    notes:content "Test not complete"^^xsd:string ;
-    notes:rank 0 .
-
-[] a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20230716> ;
-    notes:complete false ;
-    notes:content "Test not complete2"^^xsd:string ;
-    notes:rank 1 .
-
-[] a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20230716> ;
-    notes:complete false ;
-    notes:content "Test not complete"^^xsd:string ;
-    notes:rank 0 .
-
-[] a notes:Task ;
-    dcterms:isPartOf <https://www/jmoney.dev/notes/test#Daily20200624> ;
-    notes:complete false ;
-    notes:content "Test not complete2"^^xsd:string ;
-    notes:rank 1 .
 
 
