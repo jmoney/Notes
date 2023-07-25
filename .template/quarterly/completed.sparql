@@ -1,0 +1,22 @@
+SELECT ?date (group_concat(?task; separator="||") as ?tasks)
+WHERE {
+    SELECT ?date ?task
+    WHERE {
+        ?bnode rdf:type notes:Task .
+        ?bnode notes:content ?task .
+        ?bnode notes:rank ?rank .
+        ?bnode dcterms:isPartOf ?daily .
+        ?bnode notes:complete true .
+        {
+            SELECT ?daily ?date
+            WHERE {
+                ?daily rdf:type notes:Daily .
+                ?daily notes:date ?date .
+                FILTER(?date >= ?begin) .
+            }
+        }
+    }
+}
+GROUP BY ?date
+ORDER BY ?date ?rank
+

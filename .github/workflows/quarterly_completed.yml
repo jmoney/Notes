@@ -1,0 +1,53 @@
+name: Completed Daily Status Every Quarter
+concurrency: ci-${{ github.ref }}
+on:
+  workflow_dispatch:
+
+#   schedule:
+#     - cron: '0 7 1 */3 *'
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        env:
+            CI_COMMIT_MESSAGE: Generate new README
+            CI_COMMIT_AUTHOR: Github Actions
+        steps:
+            - uses: actions/checkout@v3
+            - name: Get dates
+              id: dates
+              run: |
+                echo today_filename=$(date +'%Y_%m_%d') >> $GITHUB_OUTPUT
+                year=$(date +'%Y')
+                month=$(date +'%m')
+                if [ $month -le 3 ]; then
+                  echo quarter="${year}Q1" >> $GITHUB_OUTPUT
+                elif [ $month -gt 3 ] && [ $month -le 6 ]; then
+                    echo quarter="${year}Q2" >> $GITHUB_OUTPUT
+                elif [ $month -gt 6 ] && [ $month -le 9 ]; then
+                    echo quarter="${year}Q3" >> $GITHUB_OUTPUT
+                elif [ $month -gt 9 ] && [ $month -le 12 ]; then
+                    echo quarter="${year}Q4" >> $GITHUB_OUTPUT
+                fi
+                echo SPARQL_BIND_date_begin=$(date --date='-3 month' +'%Y-%m-%d') >> $GITHUB_ENV
+            - name: Query for quarterly content
+              uses: jmoney/sparql-query@main
+              with:
+                query: ./.template/quarterly/completed.sparql
+                graph: ./notes.ttl
+                format: json
+                output-file: data.json
+            - name: Generate completed task markdown
+              uses: cuchi/jinja2-action@v1.2.0
+              with:
+                template: ./.template/quarterly/completed.md.j2
+                output_file: ./markdown/quarterly_review/${{ steps.dates.outputs.quarter }}.md
+                data_file: data.json
+                data_format: json
+            - name: Push completed tasks markdown
+              run: |
+                git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+                git config --global user.email "noreply@github.com"
+                git add ./markdown/quarterly_review/${{ steps.dates.outputs.quarter }}.md
+                git commit --message "${{ env.CI_COMMIT_MESSAGE }}"
+                git push

@@ -1,0 +1,8 @@
+# Completed the following tasks
+{% for day in results.bindings %}
+## {{ day.date.value }}
+{%- set tasks = day.tasks.value.split('||') %}
+{% for task in tasks %}
+{{ loop.index }}. {{ task }}
+{%- endfor %}
+{% endfor %}
